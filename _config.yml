@@ -1,0 +1,14 @@
+title: RocketMind
+email: admin@rocketmind.co
+url: "http://rocketmind.co"
+base_path: ""
+
+markdown: kramdown
+plugins:
+  - jekyll-coffeescript
+
+sass:
+  load_paths:
+    - css
+    - _lib
+  style: compressed

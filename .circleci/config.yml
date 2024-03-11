@@ -1,0 +1,39 @@
+defaults: &defaults
+  working_directory: ~/project
+  docker:
+    - image: starefossen/ruby-node:2-8
+
+version: 2
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Ruby dependencies
+          command: bundle install
+      - run:
+          name: Build
+          command: bundle exec jekyll build --verbose
+      - run:
+          name: Validate HTML
+          command: bundle exec htmlproofer ./_site --check-html --disable-external
+  build:
+    <<: *defaults
+    filters:
+      branches:
+        only: master
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "9b:8f:d9:5d:38:b6:4e:31:54:fe:85:22:ad:74:43:1c"
+      - checkout
+      - run:
+          name: Ruby dependencies
+          command: bundle install
+      - run:
+          name: Build
+          command: bundle exec jekyll build --verbose
+      - run:
+          name: Deploy
+          command: ssh -o "StrictHostKeyChecking no" root@dev.rocketmind.co "rm -rvf /var/www/rock/html/*"; scp -rvp -o "StrictHostKeyChecking no" ./_site/* root@dev.rocketmind.co:/var/www/rock/html -y
