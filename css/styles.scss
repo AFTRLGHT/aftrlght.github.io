@@ -37,12 +37,32 @@ body {
 
 p.bio {
   display: block;
-  width: 800px;
+  max-width: 800px;
   margin: 1rem auto;
   text-align: center;
+  width: 100%;
+}
+
+p.links {
+  font-weight: bold;
+}
+
+img.logo {
+  max-width: 1000px;
+  width: 100%;
 }
 
 #form-subscribe {
   margin: 1rem auto;
   width: fit-content;
+}
+
+@media (max-width: 600px) {
+  .bio, 
+  .links {
+      font-size: small;
+  }
+  .content {
+    padding: 20px;
+  }
 }
