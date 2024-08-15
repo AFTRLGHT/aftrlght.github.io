@@ -1,10 +1,8 @@
 <script>
 $(document).ready(function() {
-  
+  $("#form-subscribe").attr('target', 'formresult');
   $("#form-subscribe").submit(function(e) {
-    e.preventDefault();
     window.open('about:blank', 'formresult', 'scrollbars=no,menubar=no,height=200,width=400,resizable=no,toolbar=no,status=no');
-    $(this).attr('target', 'formresult');
     
     // var form = $(this);
     // var action = $(this).attr('action');
@@ -17,8 +15,6 @@ $(document).ready(function() {
     //       console.log(data);
     //     }
     // });
-
-    $(this).submit();
     
   });
   
