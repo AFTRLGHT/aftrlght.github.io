@@ -1,4 +1,4 @@
----
+ght---
 ---
 @import "fonts";
 @import "variables";
@@ -24,32 +24,39 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 25%);
 }
 
 .header {
-  display: block;
+  display: flex;
+  align-items: center;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto;
+  align-self: center;
   order: 0;
+  text-align: center;
+  min-height: 75%;
 }
 
 .content {
-  display: block;
+  display: flex;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto;
+  align-self: center;
   order: 0;
   text-align: center;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(0deg, #000 15%, transparent 100%);
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 25%;
 }
 
 p.bio {
@@ -65,7 +72,7 @@ p.links {
 }
 
 img.logo {
-  max-width: 1000px;
+  max-width: 500px;
   width: 100%;
 }
 
