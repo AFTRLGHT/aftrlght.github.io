@@ -7,6 +7,7 @@
 html {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 body {
@@ -18,44 +19,31 @@ body {
   background-size: cover;
   background-color: #000000;
   color: #ffffff;
+  margin: 0;
 }
 
 .wrapper {
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: stretch;
-  align-content: stretch;
+  min-height: 100%;
+  background: linear-gradient(0deg, #000 15%, transparent 100%);
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: center;
-  order: 0;
   text-align: center;
-  min-height: 75%;
+  flex: auto;
+  display: flex;
 }
 
 .content {
+  margin-top: auto;
   display: flex;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: center;
-  order: 0;
-  text-align: center;
-  background: linear-gradient(0deg, #000 15%, transparent 100%);
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  min-height: 25%;
+  flex: none;
+  align-items: center;
+  text-align: center;
 }
 
 p.bio {
