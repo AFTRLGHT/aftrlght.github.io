@@ -47,7 +47,8 @@ body {
   background: linear-gradient(0deg, #000 0%, transparent 100%);
 }
 
-p.bio {
+p.bio,
+h1 {
   display: block;
   max-width: 800px;
   margin: 1rem auto;
@@ -78,9 +79,9 @@ img.logo {
   .bio, 
   .links {
     font-size: small;
-    h1& {
-      font-size: x-large;
-    }
+  }
+  h1 {
+    font-size: x-large;
   }
   .content {
     padding: 20px;
