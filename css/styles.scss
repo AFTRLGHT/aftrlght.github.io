@@ -77,7 +77,10 @@ img.logo {
 @media (max-width: 1000px) {
   .bio, 
   .links {
-      font-size: small;
+    font-size: small;
+    h1.& {
+      font-size: x-large;
+    }
   }
   .content {
     padding: 20px;
