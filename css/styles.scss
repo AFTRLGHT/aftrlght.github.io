@@ -76,7 +76,7 @@ ul.links {
     svg {
       fill: white;
       width: 30px;
-      transition: filter .5s easein, fill .5s easein, transform .5s easeout;
+      transition: filter .5s ease-out, fill .5s ease-out, transform .5s ease-out;
     }
     a:link svg,
     a:visited svg {
