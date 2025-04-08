@@ -63,8 +63,18 @@ h1, h2 {
   width: 100%;
 }
 
-p.links {
-  font-weight: bold;
+ul.links {
+  display: block;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    svg {
+      width: 30px;
+    }
+  }
 }
 
 a.logo {
